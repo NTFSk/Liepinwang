@@ -28,7 +28,7 @@ class DuplicatesPipeline(object):
 			raise DropItem("useless item:%s" % item)
 			
 		# 防止入库速度过慢导致数据重复
-		item = deepcopy(item)
+		# item = deepcopy(item)
 		jobtitle = item['jobtitle']
 		company = item['company']
 		area = item['area']
