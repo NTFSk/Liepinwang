@@ -18,4 +18,5 @@ class LiepinwangItem(scrapy.Item):
     pay = scrapy.Field()  # 工资
     education = scrapy.Field()  # 教育经历
     experience = scrapy.Field()  # 工作经验
+    company = scrapy.Field()  # 公司名
     temptation = scrapy.Field()  # 福利
