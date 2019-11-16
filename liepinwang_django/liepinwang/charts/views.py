@@ -198,7 +198,7 @@ def mcharts(request):
 			.set_global_opts(  
 				# 标题配置项
 				title_opts=opts.TitleOpts(
-					title="{} {} 岗位的工作经验要求".format(area,jobkey),  # 主标题
+					title="{}地区 {} 岗位的工作经验要求".format(area,jobkey),  # 主标题
 					title_textstyle_opts=opts.TextStyleOpts(color="black",),
 					subtitle="岗位数量：{}个".format(sum(ex_num_list)),  # 副标题
 					subtitle_textstyle_opts=opts.TextStyleOpts(color="slateblue", font_size=16),
@@ -233,7 +233,7 @@ def mcharts(request):
 				pay_list,
 			)
 			.set_global_opts(
-				title_opts=opts.TitleOpts(title="{}{}岗位工资待遇".format(area, jobkey), subtitle=""),
+				title_opts=opts.TitleOpts(title="{}地区{}岗位工资待遇".format(area, jobkey), subtitle=""),
 				yaxis_opts=opts.AxisOpts(name="岗位数量"),
 				xaxis_opts=opts.AxisOpts(name="工资水平(年薪)"),
 				tooltip_opts = opts.TooltipOpts(formatter = "{b} : {c}")
@@ -253,7 +253,7 @@ def mcharts(request):
 		c = (
 			WordCloud(init_opts = opts.InitOpts(width = "900px", height = "550px", theme=ThemeType.ROMA))
 			.add("", zip(tem_list,tem_num_list), word_size_range=[20, 120], shape=SymbolType.DIAMOND)
-			.set_global_opts(title_opts=opts.TitleOpts(title="{} {} 岗位工作福利".format(area,jobkey),))
+			.set_global_opts(title_opts=opts.TitleOpts(title="{}地区 {} 岗位工作福利".format(area,jobkey),))
 		)
 		return c
 
@@ -298,7 +298,7 @@ def mcharts(request):
 				),
 			)
 			.set_global_opts(
-				title_opts=opts.TitleOpts(title="{}{}岗位的教育程度要求".format(area, jobkey)),
+				title_opts=opts.TitleOpts(title="{}地区{}岗位的教育程度要求".format(area, jobkey)),
 				legend_opts = opts.LegendOpts(
 					pos_top="bottom",
 				),
@@ -319,7 +319,7 @@ def mcharts(request):
 			)
 			.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
 			.set_global_opts(
-				title_opts=opts.TitleOpts(title="Overlap-bar+line（双 Y 轴）"),
+				title_opts=opts.TitleOpts(title="{}地区{}岗位工作经验与平均薪资".format(area, jobkey)),
 				yaxis_opts=opts.AxisOpts(
 					axislabel_opts=opts.LabelOpts(formatter="{value} 个")
 				),
