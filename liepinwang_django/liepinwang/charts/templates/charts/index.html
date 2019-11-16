@@ -1,0 +1,39 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<!-- Custom Theme files -->
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'charts/style.css' %}">
+<!-- Custom Theme files -->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Flat Search Box Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
+<!--Google Fonts-->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!--Google Fonts-->
+</head>
+<body>
+<!--search start here-->
+<div class="search">
+	<i> </i>
+	<div class="s-bar">
+	   <form action="mcharts">
+		<input type="text" value="请输入要查询的信息(如：北京 C++)" name = "key_words" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入要查询的信息(如：北京 C++)';}">
+		<input type="submit"  value="Search"/>
+	  </form>
+	</div>
+	<p>请保证输入格式:【地点 岗位名称】<a href="#">上海 Java</a> <a href="#">广东 Php</a></p>
+</div>
+<!--search end here-->	
+
+</body>
+</html>
